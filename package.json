@@ -1,0 +1,12 @@
+{
+  "name": "vue-components-rollup",
+  "version": "1.0.0",
+  "description": "vuejs 2.0 components rollup",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/coloseo/vue-components-rollup.git",
+    "type": "git"
+  },
+  "author": "Ging <wu.tongqing@gmail.com>",
+  "license": "MIT"
+}
