@@ -7,6 +7,23 @@
     "url": "https://github.com/coloseo/vue-components-rollup.git",
     "type": "git"
   },
+  "scripts": {
+    "iife": "rollup --config conf/rollup.config.js --env iife",
+    "cjs": "rollup --config conf/rollup.config.js --env cjs"
+  },
   "author": "Ging <wu.tongqing@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.2.0",
+    "rollup": "^0.36.1",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-plugin-vue2": "^0.4.0",
+    "yargs": "^6.3.0"
+  },
+  "dependencies": {
+    "vue": "^2.0.3"
+  }
 }
