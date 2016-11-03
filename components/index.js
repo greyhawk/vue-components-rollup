@@ -1,5 +1,5 @@
-import alert from './Alert.vue'
+import Helloworld from './Helloworld.vue'
 const VueStrap = [
-  alert
+  Helloworld
 ];
 export default VueStrap;

@@ -11,7 +11,7 @@ const config = {
     dest: path.resolve(__dirname, "../dist", "index.js"),
     sourceMap: false,
     useStrict: false,
-    moduleName: "rollupVue",
+    format: "cjs",
     plugins: [
       vue(),
       babel(),
