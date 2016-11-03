@@ -9,8 +9,8 @@
   },
   "scripts": {
     "lint": "eslint --ext .js,.vue components config test",
-    "iife": "rollup --config conf/rollup.config.js --env iife",
-    "cjs": "rollup --config conf/rollup.config.js --env cjs"
+    "iife": "rollup --config config/rollup.config.js --env iife",
+    "cjs": "rollup --config config/rollup.config.js --env cjs"
   },
   "author": "Ging <wu.tongqing@gmail.com>",
   "license": "MIT",
