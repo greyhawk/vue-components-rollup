@@ -8,5 +8,14 @@
     "type": "git"
   },
   "author": "Ging <wu.tongqing@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue components config test"
+  },
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-html": "^1.5.5",
+    "eslint-plugin-import": "^2.0.1"
+  }
 }
