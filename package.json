@@ -8,5 +8,10 @@
     "type": "git"
   },
   "author": "Ging <wu.tongqing@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.1"
+  }
 }
