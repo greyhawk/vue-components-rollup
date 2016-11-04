@@ -1,5 +1,5 @@
-import Helloworld from './Helloworld.vue'
+import MyComponent from './MyComponent.vue';
 const VueStrap = [
-  Helloworld
+  MyComponent,
 ];
 export default VueStrap;

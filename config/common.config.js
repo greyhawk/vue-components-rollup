@@ -8,13 +8,13 @@ import resolve from 'rollup-plugin-node-resolve'
 
 const config = {
     entry: path.resolve(__dirname, "../components", "index.js"),
-    dest: path.resolve(__dirname, "../dist/npm", "index.js"),
     sourceMap: false,
     useStrict: false,
-    format: "cjs",
     plugins: [
       vue(),
-      babel(),
+      babel({
+        compact: false
+      }),
       resolve({
            jsnext: true,
            main: true,
