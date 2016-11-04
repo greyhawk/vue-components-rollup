@@ -1,24 +1,24 @@
 import uglify from 'rollup-plugin-uglify';
 import { minify } from 'uglify-js';
-import config from "./common.config";
-import {argv} from 'yargs';
-import path from 'path'
+import { argv } from 'yargs';
+import path from 'path';
+import config from './common.config';
 
-var combinConfig =  {
-  iife: function(config){
-    config.moduleName = "rollupVue";
-    config.format = "iife";
-    config.dest = path.resolve(__dirname, "../dist/iife", "rollupVue.min.js");
+const combinConfig = {
+  iife: function iife() {
+    config.moduleName = 'rollupVue';
+    config.format = 'iife';
+    config.dest = path.resolve(__dirname, '../dist/iife', 'rollupVue.min.js');
     config.plugins.push(uglify({}, minify));
   },
-  es: function(config) {
-    config.format = "es";
-    config.dest = path.resolve(__dirname, "../dist/es", "rollupVue.js");
+  es: function es() {
+    config.format = 'es';
+    config.dest = path.resolve(__dirname, '../dist/es', 'rollupVue.js');
   },
-  cjs: function(config) {
-    config.format = "cjs";
-    config.dest = path.resolve(__dirname, "../dist/cjs", "index.js");
-  }
-}
-combinConfig[argv.env](config);
-export default config
+  cjs: function cjs() {
+    config.format = 'cjs';
+    config.dest = path.resolve(__dirname, '../dist/cjs', 'index.js');
+  },
+};
+combinConfig[argv.env]();
+export default config;

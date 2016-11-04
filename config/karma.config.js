@@ -1,18 +1,17 @@
-const path = require("path");
 const babel = require('rollup-plugin-babel');
-const vue = require("rollup-plugin-vue2");
+const vue = require('rollup-plugin-vue2');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
-const rollupPreprocessor = require("karma-rollup-plugin");
-module.exports = function(config) {
+
+module.exports = function karmaConfig(config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      './../test/index.spec.js'
+      './../test/index.spec.js',
     ],
     preprocessors: {
-      './../test/index.spec.js': ['rollup']
+      './../test/index.spec.js': ['rollup'],
     },
     singleRun: true,
     browsers: ['PhantomJS'],
@@ -20,14 +19,15 @@ module.exports = function(config) {
       plugins: [
         vue(),
         babel({
-          compact: false
+          compact: false,
+          exclude: 'node_modules/**',
         }),
         resolve(),
-        commonjs()
+        commonjs(),
       ],
       // will help to prevent conflicts between different tests entries
       sourceMap: false,
-      format: "cjs"
-    }
+      format: 'cjs',
+    },
   });
-}
+};

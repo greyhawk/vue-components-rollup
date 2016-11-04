@@ -1,4 +1,5 @@
 import MyComponent from './MyComponent.vue';
+
 const VueStrap = [
   MyComponent,
 ];
