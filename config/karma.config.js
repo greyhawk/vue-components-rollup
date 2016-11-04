@@ -20,6 +20,7 @@ module.exports = function karmaConfig(config) {
         vue(),
         babel({
           compact: false,
+          exclude: 'node_modules/**',
         }),
         resolve(),
         commonjs(),
