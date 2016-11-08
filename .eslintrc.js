@@ -15,6 +15,7 @@ module.exports = {
     'import/extensions': ['error', 'always', {
       js: 'never',
       vue: 'never',
+      mjs: 'never',
     }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
